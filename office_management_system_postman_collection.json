@@ -1,0 +1,1327 @@
+{
+	"info": {
+		"_postman_id": "5ffd7e36-bf89-412a-96d7-b2de8ad1eac9",
+		"name": "Office Management System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38237716"
+	},
+	"item": [
+		{
+			"name": "For User(Admin) Registration",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Test User\",\r\n  \"email\": \"test@example.com\",\r\n  \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "For User(Admin) Registration",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Test User\",\r\n  \"email\": \"test@example.com\",\r\n  \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "42"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2a-nMoFx54+czTntmSLXl3mqIsZV4A\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 07 Jun 2025 12:33:03 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"User registered successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test@example.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "User Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"test@example.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "275"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"113-eQPR6O7Z/lBnhdW5Xx2R44XjUIY\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 07 Jun 2025 12:40:49 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODQ0MzE3ZjM2MmRhYTI3NmNkMWEwNWUiLCJpYXQiOjE3NDkzMDAwNDksImV4cCI6MTc0OTMwMzY0OX0.CZ8fBHC7d0ayiZbrIz6pNJRP5RtJHgWbaVhY2r7X2Lo\",\n    \"user\": {\n        \"id\": \"6844317f362daa276cd1a05e\",\n        \"name\": \"Test User\",\n        \"email\": \"test@example.com\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Create a department",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODQ0MzE3ZjM2MmRhYTI3NmNkMWEwNWUiLCJpYXQiOjE3NDkzMDAwNDksImV4cCI6MTc0OTMwMzY0OX0.CZ8fBHC7d0ayiZbrIz6pNJRP5RtJHgWbaVhY2r7X2Lo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"ACE 360\",\r\n    \"address\": \"Evershine Mall, Malad West.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/departments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"departments"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create a department",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODQ0MzE3ZjM2MmRhYTI3NmNkMWEwNWUiLCJpYXQiOjE3NDkzMDAwNDksImV4cCI6MTc0OTMwMzY0OX0.CZ8fBHC7d0ayiZbrIz6pNJRP5RtJHgWbaVhY2r7X2Lo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"ACE 360\",\r\n    \"address\": \"Evershine Mall, Malad West.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/departments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"departments"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "46"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2e-pCsfchbROYL/0/UXxnwEtubHsYw\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 07 Jun 2025 12:50:40 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Department created successfully.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Fetch departments",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODQ0MzE3ZjM2MmRhYTI3NmNkMWEwNWUiLCJpYXQiOjE3NDkzMDAwNDksImV4cCI6MTc0OTMwMzY0OX0.CZ8fBHC7d0ayiZbrIz6pNJRP5RtJHgWbaVhY2r7X2Lo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/departments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"departments"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODQ0MzE3ZjM2MmRhYTI3NmNkMWEwNWUiLCJpYXQiOjE3NDkzMDAwNDksImV4cCI6MTc0OTMwMzY0OX0.CZ8fBHC7d0ayiZbrIz6pNJRP5RtJHgWbaVhY2r7X2Lo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/departments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"departments"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "101"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"65-L/dOhmJnHZWJr4jX894jpRaiuEs\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 07 Jun 2025 12:53:24 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"684435a0362daa276cd1a071\",\n        \"name\": \"ACE 360\",\n        \"address\": \"Evershine Mall, Malad West.\",\n        \"__v\": 0\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Fetch departments by Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODQ0MzE3ZjM2MmRhYTI3NmNkMWEwNWUiLCJpYXQiOjE3NDkzMDAwNDksImV4cCI6MTc0OTMwMzY0OX0.CZ8fBHC7d0ayiZbrIz6pNJRP5RtJHgWbaVhY2r7X2Lo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/departments/684435a0362daa276cd1a071",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"departments",
+						"684435a0362daa276cd1a071"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Fetch departments by Id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODQ0MzE3ZjM2MmRhYTI3NmNkMWEwNWUiLCJpYXQiOjE3NDkzMDAwNDksImV4cCI6MTc0OTMwMzY0OX0.CZ8fBHC7d0ayiZbrIz6pNJRP5RtJHgWbaVhY2r7X2Lo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/departments/684435a0362daa276cd1a071",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"departments",
+								"684435a0362daa276cd1a071"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "99"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"63-lxkYg3NrxuILh1ixP6JhZmL2eZY\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 07 Jun 2025 12:54:30 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"684435a0362daa276cd1a071\",\n    \"name\": \"ACE 360\",\n    \"address\": \"Evershine Mall, Malad West.\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Edit Department",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODQ0MzE3ZjM2MmRhYTI3NmNkMWEwNWUiLCJpYXQiOjE3NDkzMDAwNDksImV4cCI6MTc0OTMwMzY0OX0.CZ8fBHC7d0ayiZbrIz6pNJRP5RtJHgWbaVhY2r7X2Lo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"ACE 360\",\r\n    \"address\": \"Evershine Mall, Malad West, Mumbai\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/departments/684435a0362daa276cd1a071",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"departments",
+						"684435a0362daa276cd1a071"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODQ0MzE3ZjM2MmRhYTI3NmNkMWEwNWUiLCJpYXQiOjE3NDkzMDAwNDksImV4cCI6MTc0OTMwMzY0OX0.CZ8fBHC7d0ayiZbrIz6pNJRP5RtJHgWbaVhY2r7X2Lo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"ACE 360\",\r\n    \"address\": \"Evershine Mall, Malad West, Mumbai\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/departments/684435a0362daa276cd1a071",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"departments",
+								"684435a0362daa276cd1a071"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "106"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"6a-uJIVTsh9mJSJu+sAWCczGvnGCXE\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 07 Jun 2025 12:56:28 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"684435a0362daa276cd1a071\",\n    \"name\": \"ACE 360\",\n    \"address\": \"Evershine Mall, Malad West, Mumbai\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Department",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODQ0MzE3ZjM2MmRhYTI3NmNkMWEwNWUiLCJpYXQiOjE3NDkzMDAwNDksImV4cCI6MTc0OTMwMzY0OX0.CZ8fBHC7d0ayiZbrIz6pNJRP5RtJHgWbaVhY2r7X2Lo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"ACE 360\",\r\n    \"address\": \"Evershine Mall, Malad West, Mumbai\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/departments/684435a0362daa276cd1a071",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"departments",
+						"684435a0362daa276cd1a071"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete Department",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODQ0MzE3ZjM2MmRhYTI3NmNkMWEwNWUiLCJpYXQiOjE3NDkzMDAwNDksImV4cCI6MTc0OTMwMzY0OX0.CZ8fBHC7d0ayiZbrIz6pNJRP5RtJHgWbaVhY2r7X2Lo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"ACE 360\",\r\n    \"address\": \"Evershine Mall, Malad West, Mumbai\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/departments/684435a0362daa276cd1a071",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"departments",
+								"684435a0362daa276cd1a071"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "68"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"44-r/JBJI8o9HJ68jWmxrQq9Fu9xAs\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 07 Jun 2025 12:57:42 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Department deleted successfully, employees unassigned.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Create an Employee",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODQ0MzE3ZjM2MmRhYTI3NmNkMWEwNWUiLCJpYXQiOjE3NDkzMDAwNDksImV4cCI6MTc0OTMwMzY0OX0.CZ8fBHC7d0ayiZbrIz6pNJRP5RtJHgWbaVhY2r7X2Lo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Mr. ABC\",\r\n  \"email\": \"abc@gmail.com\",\r\n  \"position\": \"Manager\",\r\n  \"department\": \"68443780362daa276cd1a07b\",\r\n  \"manager\": \"\",\r\n  \"country\": \"Argentina\",\r\n  \"state\": \"Río Negro Province\",\r\n  \"city\": \"Contraalmirante Cordero\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"employees"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create an Employee",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODQ0MzE3ZjM2MmRhYTI3NmNkMWEwNWUiLCJpYXQiOjE3NDkzMDAwNDksImV4cCI6MTc0OTMwMzY0OX0.CZ8fBHC7d0ayiZbrIz6pNJRP5RtJHgWbaVhY2r7X2Lo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Mr. ABC\",\r\n  \"email\": \"abc@gmail.com\",\r\n  \"position\": \"Manager\",\r\n  \"department\": \"68443780362daa276cd1a07b\",\r\n  \"manager\": \"\",\r\n  \"country\": \"Argentina\",\r\n  \"state\": \"Río Negro Province\",\r\n  \"city\": \"Contraalmirante Cordero\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/employees",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"employees"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "44"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2c-lHq3IQaHGECet8PTYZsrjDByxZQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 07 Jun 2025 13:03:40 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Employee Created Successfully.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Fetch all Employees",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODQ0MzE3ZjM2MmRhYTI3NmNkMWEwNWUiLCJpYXQiOjE3NDkzMDAwNDksImV4cCI6MTc0OTMwMzY0OX0.CZ8fBHC7d0ayiZbrIz6pNJRP5RtJHgWbaVhY2r7X2Lo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Mr. ABC\",\r\n  \"email\": \"abc@gmail.com\",\r\n  \"position\": \"Manager\",\r\n  \"department\": \"68443780362daa276cd1a07b\",\r\n  \"manager\": \"\",\r\n  \"country\": \"Argentina\",\r\n  \"state\": \"Río Negro Province\",\r\n  \"city\": \"Contraalmirante Cordero\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"employees"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Fetch all Employees",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODQ0MzE3ZjM2MmRhYTI3NmNkMWEwNWUiLCJpYXQiOjE3NDkzMDAwNDksImV4cCI6MTc0OTMwMzY0OX0.CZ8fBHC7d0ayiZbrIz6pNJRP5RtJHgWbaVhY2r7X2Lo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Mr. ABC\",\r\n  \"email\": \"abc@gmail.com\",\r\n  \"position\": \"Manager\",\r\n  \"department\": \"68443780362daa276cd1a07b\",\r\n  \"manager\": \"\",\r\n  \"country\": \"Argentina\",\r\n  \"state\": \"Río Negro Province\",\r\n  \"city\": \"Contraalmirante Cordero\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/employees",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"employees"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "309"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"135-XU0P2uRD9v4/JdsT8qEePTeDNg4\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 07 Jun 2025 13:04:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"684438ac362daa276cd1a088\",\n        \"name\": \"Mr. ABC\",\n        \"email\": \"abc@gmail.com\",\n        \"position\": \"Manager\",\n        \"department\": {\n            \"_id\": \"68443780362daa276cd1a07b\",\n            \"name\": \"Ace 360 Degree\",\n            \"address\": \"Malad west\",\n            \"__v\": 0\n        },\n        \"manager\": null,\n        \"country\": \"Argentina\",\n        \"state\": \"Río Negro Province\",\n        \"city\": \"Contraalmirante Cordero\",\n        \"__v\": 0\n    }\n]"
+				},
+				{
+					"name": "Fetch all Employees",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODQ0MzE3ZjM2MmRhYTI3NmNkMWEwNWUiLCJpYXQiOjE3NDkzMDAwNDksImV4cCI6MTc0OTMwMzY0OX0.CZ8fBHC7d0ayiZbrIz6pNJRP5RtJHgWbaVhY2r7X2Lo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Mr. ABC\",\r\n  \"email\": \"abc@gmail.com\",\r\n  \"position\": \"Manager\",\r\n  \"department\": \"68443780362daa276cd1a07b\",\r\n  \"manager\": \"\",\r\n  \"country\": \"Argentina\",\r\n  \"state\": \"Río Negro Province\",\r\n  \"city\": \"Contraalmirante Cordero\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/employees",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"employees"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "309"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"135-XU0P2uRD9v4/JdsT8qEePTeDNg4\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 07 Jun 2025 13:04:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"684438ac362daa276cd1a088\",\n        \"name\": \"Mr. ABC\",\n        \"email\": \"abc@gmail.com\",\n        \"position\": \"Manager\",\n        \"department\": {\n            \"_id\": \"68443780362daa276cd1a07b\",\n            \"name\": \"Ace 360 Degree\",\n            \"address\": \"Malad west\",\n            \"__v\": 0\n        },\n        \"manager\": null,\n        \"country\": \"Argentina\",\n        \"state\": \"Río Negro Province\",\n        \"city\": \"Contraalmirante Cordero\",\n        \"__v\": 0\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Fetch employees based on query",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODQ0MzE3ZjM2MmRhYTI3NmNkMWEwNWUiLCJpYXQiOjE3NDkzMTU0NjgsImV4cCI6MTc0OTMxOTA2OH0.3sVX2DkVQCNyOsjaF6c5Mr7VI83iOwE4gTDnQgdxiOs",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/employees/query?position=Employee&department=68443780362daa276cd1a07b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"employees",
+						"query"
+					],
+					"query": [
+						{
+							"key": "position",
+							"value": "Employee"
+						},
+						{
+							"key": "department",
+							"value": "68443780362daa276cd1a07b"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Fetch employees based on query",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODQ0MzE3ZjM2MmRhYTI3NmNkMWEwNWUiLCJpYXQiOjE3NDkzMTU0NjgsImV4cCI6MTc0OTMxOTA2OH0.3sVX2DkVQCNyOsjaF6c5Mr7VI83iOwE4gTDnQgdxiOs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/employees/query?position=Employee&department=68443780362daa276cd1a07b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"employees",
+								"query"
+							],
+							"query": [
+								{
+									"key": "position",
+									"value": "Employee"
+								},
+								{
+									"key": "department",
+									"value": "68443780362daa276cd1a07b"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1269"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"4f5-w8NShw0QYJk2lOMRI/lQUJtHKoY\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 07 Jun 2025 16:59:12 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"totalDocuments\": 4,\n    \"page\": 1,\n    \"totalPages\": 1,\n    \"employees\": [\n        {\n            \"_id\": \"68443948362daa276cd1a098\",\n            \"name\": \"Mr. XYZ\",\n            \"email\": \"xyz@gmail.com\",\n            \"position\": \"Employee\",\n            \"department\": {\n                \"_id\": \"68443780362daa276cd1a07b\",\n                \"name\": \"Ace 360 Degree\"\n            },\n            \"manager\": {\n                \"_id\": \"684438ac362daa276cd1a088\",\n                \"name\": \"Mr. ABC\"\n            },\n            \"country\": \"Australia\",\n            \"state\": \"Western Australia\",\n            \"city\": \"Perth city centre\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"68446807bcd9844190e04cae\",\n            \"name\": \"Mr. abc\",\n            \"email\": \"ktdfkm\",\n            \"position\": \"Employee\",\n            \"department\": {\n                \"_id\": \"68443780362daa276cd1a07b\",\n                \"name\": \"Ace 360 Degree\"\n            },\n            \"manager\": {\n                \"_id\": \"684438ac362daa276cd1a088\",\n                \"name\": \"Mr. ABC\"\n            },\n            \"country\": \"Congo\",\n            \"state\": \"Pool Department\",\n            \"city\": \"Kinkala\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"68446731bcd9844190e04c8e\",\n            \"name\": \"SM\",\n            \"email\": \"hvam\",\n            \"position\": \"Employee\",\n            \"department\": {\n                \"_id\": \"68443780362daa276cd1a07b\",\n                \"name\": \"Ace 360 Degree\"\n            },\n            \"manager\": {\n                \"_id\": \"684438ac362daa276cd1a088\",\n                \"name\": \"Mr. ABC\"\n            },\n            \"country\": \"Australia\",\n            \"state\": \"Queensland\",\n            \"city\": \"Allora\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"68446976bcd9844190e04cbe\",\n            \"name\": \"nmcgnf\",\n            \"email\": \"deptinchargecmpn@gmail.com\",\n            \"position\": \"Employee\",\n            \"department\": {\n                \"_id\": \"68443780362daa276cd1a07b\",\n                \"name\": \"Ace 360 Degree\"\n            },\n            \"manager\": {\n                \"_id\": \"684438ac362daa276cd1a088\",\n                \"name\": \"Mr. ABC\"\n            },\n            \"country\": \"Georgia\",\n            \"state\": \"Samegrelo-Zemo Svaneti\",\n            \"city\": \"\",\n            \"__v\": 0\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Edit employee",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODQ0MzE3ZjM2MmRhYTI3NmNkMWEwNWUiLCJpYXQiOjE3NDkzMTU0NjgsImV4cCI6MTc0OTMxOTA2OH0.3sVX2DkVQCNyOsjaF6c5Mr7VI83iOwE4gTDnQgdxiOs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Mr. XYAJHVHZ\",\r\n    \"email\": \"xyz@gmail.com\",\r\n    \"position\": \"Employee\",\r\n    \"department\": \"68443780362daa276cd1a07b\",\r\n    \"manager\": \"684438ac362daa276cd1a088\",\r\n    \"country\": \"Australia\",\r\n    \"state\": \"Western Australia\",\r\n    \"city\": \"Perth city centre\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/employees/68443948362daa276cd1a098",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"employees",
+						"68443948362daa276cd1a098"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODQ0MzE3ZjM2MmRhYTI3NmNkMWEwNWUiLCJpYXQiOjE3NDkzMTU0NjgsImV4cCI6MTc0OTMxOTA2OH0.3sVX2DkVQCNyOsjaF6c5Mr7VI83iOwE4gTDnQgdxiOs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Mr. XYAJHVHZ\",\r\n    \"email\": \"xyz@gmail.com\",\r\n    \"position\": \"Employee\",\r\n    \"department\": \"68443780362daa276cd1a07b\",\r\n    \"manager\": \"684438ac362daa276cd1a088\",\r\n    \"country\": \"Australia\",\r\n    \"state\": \"Western Australia\",\r\n    \"city\": \"Perth city centre\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/employees/68443948362daa276cd1a098",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"employees",
+								"68443948362daa276cd1a098"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "264"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"108-5qEKLOzOzO5u4n4fPhNxclHukfQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 07 Jun 2025 17:15:43 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"68443948362daa276cd1a098\",\n    \"name\": \"Mr. XYAJHVHZ\",\n    \"email\": \"xyz@gmail.com\",\n    \"position\": \"Employee\",\n    \"department\": \"68443780362daa276cd1a07b\",\n    \"manager\": \"684438ac362daa276cd1a088\",\n    \"country\": \"Australia\",\n    \"state\": \"Western Australia\",\n    \"city\": \"Perth city centre\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Employee",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODQ0MzE3ZjM2MmRhYTI3NmNkMWEwNWUiLCJpYXQiOjE3NDkzMTU0NjgsImV4cCI6MTc0OTMxOTA2OH0.3sVX2DkVQCNyOsjaF6c5Mr7VI83iOwE4gTDnQgdxiOs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/employees/68443948362daa276cd1a098",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"employees",
+						"68443948362daa276cd1a098"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete Employee",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODQ0MzE3ZjM2MmRhYTI3NmNkMWEwNWUiLCJpYXQiOjE3NDkzMTU0NjgsImV4cCI6MTc0OTMxOTA2OH0.3sVX2DkVQCNyOsjaF6c5Mr7VI83iOwE4gTDnQgdxiOs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/employees/68443948362daa276cd1a098",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"employees",
+								"68443948362daa276cd1a098"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "43"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2b-i4qa4hauo85pXTwHLLOsg1OOhio\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 07 Jun 2025 17:17:38 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Employee deleted successfully\"\n}"
+				}
+			]
+		}
+	]
+}
